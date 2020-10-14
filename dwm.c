@@ -485,7 +485,6 @@ buttonpress(XEvent *e)
 		} else if (ev->x < x + blw)
 			click = ClkLtSymbol;
 		else if (ev->x > selmon->ww - (int)TEXTWM(stext) - getsystraywidth())
-		else if (ev->x > selmon->ww - (int)TEXTWM(stext))
 			click = ClkStatusText;
 		else
 			click = ClkWinTitle;
@@ -800,8 +799,8 @@ void
 drawbar(Monitor *m)
 {
 	int x, w, tw = 0, stw = 0;
-	int boxs = drw->fonts->h / 9;
-	int boxw = drw->fonts->h / 6 + 2;
+	int boxs = drw->font->h / 9;
+	int boxw = drw->font->h / 6 + 2;
 	unsigned int i, occ = 0, urg = 0;
 	Client *c;
 
@@ -1732,7 +1731,7 @@ setup(void)
 	root = RootWindow(dpy, screen);
 	xinitvisual();
 	drw = drw_create(dpy, screen, root, sw, sh, visual, depth, cmap);
-	if (!drw_fontset_create(drw, fonts, LENGTH(fonts)))
+	if (!drw_font_create(drw, font, LENGTH(font)))
 		die("no fonts could be loaded.");
 	lrpad = drw->font->h;
 	bh = drw->font->h + 2;
