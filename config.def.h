@@ -94,6 +94,13 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ 0, XF86XK_AudioLowerVolume, spawn, SHCMD("amixer set Master 2%- && volnoti-show $(amixer get Master | grep -Po '[0-9]+(?=%)' | head -1) && amixer set Master unmute && pkill -RTMIN+2 dwmblocks" ) },
+135     { 0, XF86XK_AudioMute, spawn, SHCMD("amixer set Master toggle && if amixer get Master | grep -Fq '[off]'; then volnoti-show -m; else volnoti-show $(amixer get Master | grep -Po '[0-9]+(?=%)' | head -1); fi && pkill -RTMIN+2 dwmblocks" ) },
+136     { 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("amixer set Master 2%+ && volnoti-show $(amixer get Master | grep -Po '[0-9]+(?=%)' | head -1) && amixer set Master unmute && pkill -RTMIN+2 dwmblocks") },
+137     { 0, XF86XK_MonBrightnessUp, spawn, SHCMD("light -A 5 && pkill -RTMIN+1 dwmblocks") },
+138     { 0, XF86XK_MonBrightnessDown, spawn, SHCMD("light -U 5 && pkill -RTMIN+1 dwmblocks") },
+139     { MODKEY|ShiftMask, XK_x, spawn, SHCMD("~/Scripts/lock.sh") },  
+140     { MODKEY|ShiftMask, XK_s, spawn, SHCMD("spectacle -bcr") },
 };
 
 /* button definitions */
