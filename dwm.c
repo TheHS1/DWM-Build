@@ -738,7 +738,6 @@ drawbar(Monitor *m)
 	drw_arrow(drw, x, 0, plw, bh, 1, 0);
 	x += plw;
 
-	}
 	w = blw = TEXTW(m->ltsymbol);
 	drw_setscheme(drw, scheme[SchemeNorm]);
 	x = drw_text(drw, x, 0, w, bh, lrpad / 2, m->ltsymbol, 0);
