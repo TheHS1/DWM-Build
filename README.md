@@ -9,5 +9,5 @@ My dwm build
 * hidevacanttags
 * pango
 * sendmon-keepfocus
-* systray
+* systray (unaffected by alpha patch)
 * warp
