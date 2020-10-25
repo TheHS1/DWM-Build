@@ -116,7 +116,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_q,      spawn,          SHCMD("~/Scripts/dmenuExit") },
 	{ 0, XF86XK_AudioLowerVolume, spawn, SHCMD("amixer set Master 2%- && volnoti-show $(amixer get Master | grep -Po '[0-9]+(?=%)' | head -1) && amixer set Master unmute && pkill -RTMIN+2 goblocks" ) },
         { 0, XF86XK_AudioMute, spawn, SHCMD("amixer set Master toggle && if amixer get Master | grep -Fq '[off]'; then volnoti-show -m; else volnoti-show $(amixer get Master | grep -Po '[0-9]+(?=%)' | head -1); fi && pkill -RTMIN+2 goblocks" ) },
         { 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("amixer set Master 2%+ && volnoti-show $(amixer get Master | grep -Po '[0-9]+(?=%)' | head -1) && amixer set Master unmute && pkill -RTMIN+2 goblocks") },
