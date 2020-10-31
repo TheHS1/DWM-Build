@@ -4,6 +4,7 @@ My dwm build
 * actualfullscreen
 * alphasystray
 * autostart
+* centeredmaster
 * fibonacci
 * fullgaps
 * hidevacanttags
