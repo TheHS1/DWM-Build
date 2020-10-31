@@ -2,11 +2,12 @@
 My dwm build
 ## Applied patches:
 * actualfullscreen
-* alphasystray
+* alpha
 * autostart
 * fibonacci
 * fullgaps
 * hidevacanttags
 * pango
 * sendmon-keepfocus
+* systray
 * warp
