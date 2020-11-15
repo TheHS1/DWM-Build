@@ -127,7 +127,7 @@ static Key keys[] = {
         { 0, XF86XK_MonBrightnessUp, spawn, SHCMD("light -A 5 && pkill -RTMIN+1 goblocks") },
         { 0, XF86XK_MonBrightnessDown, spawn, SHCMD("light -U 5 && pkill -RTMIN+1 goblocks") },
         { MODKEY|ShiftMask, XK_x, spawn, SHCMD("betterlockscreen -l") },  
-        { MODKEY|ShiftMask, XK_s, spawn, SHCMD("spectacle -bcr") },
+        { MODKEY|ShiftMask, XK_s, spawn, SHCMD("~/Scripts/screenshot") },
 };
 
 /* button definitions */
